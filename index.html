@@ -1,31 +1,354 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>OER Login</title>
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.topnav .icon {
+  display: none;
+}
+#tfnewsearch{
+		float:right;
+		padding:20px;
+	}
+	.tftextinput{
+		margin: 0;
+		padding: 5px 15px;
+		font-family: Arial, Helvetica, sans-serif;
+		font-size:14px;
+		border:1px solid #0076a3; border-right:0px;
+		border-top-left-radius: 5px 5px;
+		border-bottom-left-radius: 5px 5px;
+	}
+	.tfbutton {
+		margin: 0;
+		padding: 5px 15px;
+		font-family: Arial, Helvetica, sans-serif;
+		font-size:14px;
+		outline: none;
+		cursor: pointer;
+		text-align: center;
+		text-decoration: none;
+		color: #ffffff;
+		border: solid 1px #0076a3; border-right:0px;
+		background: #0095cd;
+		background: -webkit-gradient(linear, left top, left bottom, from(#00adee), to(#0078a5));
+		background: -moz-linear-gradient(top,  #00adee,  #0078a5);
+		border-top-right-radius: 5px 5px;
+		border-bottom-right-radius: 5px 5px;
+	}
+	.tfbutton:hover {
+		text-decoration: none;
+		background: #007ead;
+		background: -webkit-gradient(linear, left top, left bottom, from(#0095cc), to(#00678e));
+		background: -moz-linear-gradient(top,  #0095cc,  #00678e);
+	}
+	/* Fixes submit button height problem in Firefox */
+	.tfbutton::-moz-focus-inner {
+	  border: 0;
+	}
+	.tfclear{
+		clear:both;
+	}
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Time News Roman;
+    overflow-y: scroll;
+    width: 100%;
+	height: auto;
+	background-image: url(https://www.vactualpapers.com/wallpapers/blurry-background-vactual-exclusive-hd-wallpaper-no-152/download/1920x1080.png);
+	background-size: cover;
+	-webkit-filter: blur(0px);
+}
+
+.header {
+  text-align: center;
+  padding: 32px;
+}
+
+.row {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+
+.column {
+  -ms-flex: 25%;
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+}
+
+.topnav input[type=text] {
+  float: right;
+  padding: 6px;
+  margin-top: 8px;
+  margin-right: 16px;
+  border: none;
+  font-size: 17px;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav a, .topnav input[type=text] {
+    float: none;
+    display: block;
+    text-align: left;
+    width: 100%;
+    margin: 0;
+    padding: 14px;
+  }
+
+  .topnav input[type=text] {
+    border: 1px solid #ffffff;
+  }
+}
+</style>
+<body>
+
+<div class="topnav" id="myTopnav">
+  <a href="Films" class="active">Books</a>
+  <a href="https://stephenswebsite.000webhostapp.com/Laws.html">Legal</a>
+  <a href="https://stephenswebsite.000webhostapp.com/ContactMe.html">Contact</a>
+  <a href="https://stephenswebsite.000webhostapp.com/About.html">About</a>
+  <a href="https://stephenswebsite.000webhostapp.com/index4.html">Login</a>
+
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
+
+<script type="text/javascript">
+function search(text) {
+window.open('https://www.oercommons.org/search?f.search=' + text,   'textwindow');
+}
+
+      </script>
+
+
+
+
+
+
+<div id="tfheader">
+
+	<form id="tfnewsearch" form onsubmit="search(this.text.value); return false;"
+     placeholder="Search OER Commons" />
+		        <input type="text" class="" name="text" size="21" maxlength="120"><input type="submit" value="Search OER Commons" class="tfbutton">
+		</form>
+	<div class="tfclear"></div>
+	</div>
+
+
+
+
+
+
+<div class="header">
+  <h1><center> <font color="white">Stephen's OER Project. </h1>
+  <p>OER stands for Open Educational Resources <br> My 133J Final project will have many open source textbooks for Computer Science Courses & Other Courses <br> Below you will find the textbooks. Free. <br> </p>
+</div>
+
+
+<div class="row">
+  <div class="column">
+  <a href="https://stephenswebsite.000webhostapp.com/AByte.html" id="AByte" onclick="document.location=this.id+'.html';return false;" >
+    <img src="https://images-na.ssl-images-amazon.com/images/I/31uOhR-yilL.jpg" style="width:100%" alt="bottle" class="thumbnails" />
+</a>
+
+<a href="https://stephenswebsite.000webhostapp.com/Algorithms.html" id="Algorithms" onclick="document.location=this.id+'.html';return false;" >
+    <img src="https://open.bccampus.ca/files/2018/10/OTB045-01-151x196.jpg" style="width:100%" alt="bottle" class="thumbnails" />
+</a>
+
+<a href="https://stephenswebsite.000webhostapp.com/NetWork.html" id="NetWork" onclick="document.location=this.id+'.html';return false;" >
+    <img src="https://www.oercommons.org/static/newdesign/images/materials/default-thumbnail-index.png?ea06182512f9" style="width:100%" alt="bottle" class="thumbnails" />
+</a>
+
+<a href="https://stephenswebsite.000webhostapp.com/Database.html" id="Database" onclick="document.location=this.id+'.html';return false;" >
+    <img src="https://open.bccampus.ca/files/2019/02/OTB008-Database-Design-2018-COVER-151x196.jpg" style="width:100%" alt="bottle" class="thumbnails" />
+</a>
+
+<a href="https://stephenswebsite.000webhostapp.com/EJS.html" id="EJS" onclick="document.location=this.id+'.html';return false;" >
+    <img src="http://eloquentjavascript.net/img/cover.jpg" style="width:100%" alt="bottle" class="thumbnails" />
+</a>
+
+<a href="https://stephenswebsite.000webhostapp.com/CArduino.html" id="CArduino" onclick="document.location=this.id+'.html';return false;" >
+    <img src="https://images-na.ssl-images-amazon.com/images/I/51j7hwIjYXL._SX385_BO1,204,203,200_.jpg" style="width:100%" alt="bottle" class="thumbnails" />
+</a>
+
+<a href="https://stephenswebsite.000webhostapp.com/CArduino2.html" id="CArduino2" onclick="document.location=this.id+'.html';return false;" >
+    <img src="https://images-na.ssl-images-amazon.com/images/I/51j7hwIjYXL._SX385_BO1,204,203,200_.jpg" style="width:100%" alt="bottle" class="thumbnails" />
+</a>
+
+  </div>
+  <div class="column">
+
+  <a href="https://stephenswebsite.000webhostapp.com/EHacking.html" id="EHacking" onclick="document.location=this.id+'.html';return false;" >
+    <img src="https://oer.galileo.usg.edu/compsci-collections/1008/preview.jpg" style="width:100%" alt="bottle" class="thumbnails" />
+</a>
+
+  <a href="https://stephenswebsite.000webhostapp.com/Foundations.html" id="Foundations" onclick="document.location=this.id+'.html';return false;" >
+    <img src="http://math.hws.edu/FoundationsOfComputation/FoundationsOfComputation_small_cover.png" style="width:100%" alt="bottle" class="thumbnails" />
+</a>
+
+  <a href="https://stephenswebsite.000webhostapp.com/C++.html" id="C++" onclick="document.location=this.id+'.html';return false;" >
+    <img src="https://images-na.ssl-images-amazon.com/images/I/41XQbA2IroL._SX258_BO1,204,203,200_.jpg" style="width:100%" alt="bottle" class="thumbnails" />
+</a>
+
+<a href="https://stephenswebsite.000webhostapp.com/Java.html" id="Java" onclick="document.location=this.id+'.html';return false;" >
+    <img src="https://www.bluej.org/scope-highlighting.png" style="width:100%" alt="bottle" class="thumbnails" />
+</a>
+
+<a href="https://stephenswebsite.000webhostapp.com/TMI.html" id="TMI" onclick="document.location=this.id+'.html';return false;" >
+    <img src="https://textbooks.opensuny.org/wp-content/uploads/iconwithlogo-01-170x170.png" style="width:100%" alt="bottle" class="thumbnails" />
+</a>
+
+<a href="https://stephenswebsite.000webhostapp.com/DS.html" id="DS" onclick="document.location=this.id+'.html';return false;" >
+    <img src="https://open.bccampus.ca/files/2013/11/OTB020-01-open-data-structures-151x196.jpg" style="width:100%" alt="bottle" class="thumbnails" />
+</a>
+
+<a href="https://stephenswebsite.000webhostapp.com/WD.html" id="WD" onclick="document.location=this.id+'.html';return false;" >
+    <img src="https://pressbooks.library.ryerson.ca/webdesign/wp-content/uploads/sites/25/2019/01/webdesignprimer_cover-1-350x453.png" style="width:100%" alt="bottle" class="thumbnails" />
+</a>
+
+  </div>
+  <div class="column">
+
+  <a href="https://stephenswebsite.000webhostapp.com/Excel.html" id="Excel" onclick="document.location=this.id+'.html';return false;" >
+    <img src="https://covers.flatworldknowledge.com/manzoexcel_1.1/cover.png" style="width:100%" alt="bottle" class="thumbnails" />
+</a>
+
+<a href="https://stephenswebsite.000webhostapp.com/Word.html" id="Word" onclick="document.location=this.id+'.html';return false;" >
+    <img src="http://www.lablearning.com/WD16_300x388.jpg" style="width:100%" alt="bottle" class="thumbnails" />
+</a>
+
+
+
+<a href="https://stephenswebsite.000webhostapp.com/PPT.html" id="PPT" onclick="document.location=this.id+'.html';return false;" >
+    <img src="http://akamaicovers.oreilly.com/images/0790145362308/lrg.jpg" style="width:100%" alt="bottle" class="thumbnails" />
+</a>
+
+ <a href="https://stephenswebsite.000webhostapp.com/TPR.html" id="TPR" onclick="document.location=this.id+'.html';return false;" >
+    <img src="http://www.ushistory.org/us/images/00001304.jpg" style="width:100%" alt="bottle" class="thumbnails" />
+</a>
+
+ <a href="https://stephenswebsite.000webhostapp.com/TheInternet.html" id="TheInternet" onclick="document.location=this.id+'.html';return false;" >
+    <img src="https://store.lexisnexis.com/img/product/w800/9781579112646_1_cover.jpg" style="width:100%" alt="bottle" class="thumbnails" />
+</a>
+
+ <a href="https://stephenswebsite.000webhostapp.com/SNetwork.html" id="SNetwork" onclick="document.location=this.id+'.html';return false;" >
+    <img src="https://oercommons.s3.amazonaws.com/media/thumbnails/42/e5/42e52e6dca669794180ffc2be179086c.png" style="width:100%" alt="bottle" class="thumbnails" />
+</a>
+
+</div>
+
+ <div class="column">
+
+  <a href="https://stephenswebsite.000webhostapp.com/Algebra.html" id="Algebra" onclick="document.location=this.id+'.html';return false;" >
+    <img src="https://www.oercommons.org/static/newdesign/images/materials/default-thumbnail-index.png?ea06182512f9" style="width:100%" alt="bottle" class="thumbnails" />
+</a>
+
+<a href="https://stephenswebsite.000webhostapp.com/ACalc.html" id="ACalc" onclick="document.location=this.id+'.html';return false;" >
+    <img src="https://www.oercommons.org/static/newdesign/images/materials/default-thumbnail-index.png?ea06182512f9" style="width:100%" alt="bottle" class="thumbnails" />
+</a>
+
+<a href="https://stephenswebsite.000webhostapp.com/MMusic.html" id="MMusic" onclick="document.location=this.id+'.html';return false;" >
+    <img src="https://www.teachengineering.org/content/cub_/lessons/cub_images/cub_soundandlight_lesson3_clipart1.jpg" style="width:100%" alt="bottle" class="thumbnails" />
+</a>
+
+ <a href="https://stephenswebsite.000webhostapp.com/DigiPhoto.html" id="DigiPhoto" onclick="document.location=this.id+'.html';return false;" >
+    <img src="https://www.oercommons.org/static/newdesign/images/materials/default-thumbnail-index.png?ea06182512f9" style="width:100%" alt="bottle" class="thumbnails" />
+</a>
+
+ <a href="https://stephenswebsite.000webhostapp.com/Filmy.html" id="Filmy" onclick="document.location=this.id+'.html';return false;" >
+    <img src="https://www.oercommons.org/static/newdesign/images/materials/default-thumbnail-index.png?ea06182512f9" style="width:100%" alt="bottle" class="thumbnails" />
+</a>
+
+
+</div>
+
 <script>
-function validateForm() {
-  var x = document.forms["myForm"]["fname"].value;
-  if (x == "") {
-    alert("Name must be filled out");
-    return false;
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
   }
 }
 </script>
-</head>
-<body>
 
-<form class="box" form name="myForm" action="https://stephenswebsite.000webhostapp.com/OER.html" onsubmit="return validateForm()" method="post">
- <h1>Login</h1>
-  <input type="text" name="Sisi" placeholder="Username">
-  <input type="password" name="Virasak" placeholder="Password">
-  <input type="submit" name="Submit" value="Login">
-</form>
+<script src="https://yvoschaap.com/ytpage/ytembed.js"></script>
+<div id="ytThumbs"><ins>Made with the <a href="https://yvoschaap.com/youtube.html?utm_source=generator">Youtube Embed Generator</a>.</ins></div>
 
-</script></body>
+<script>
+	ytEmbed.init({'block':'ytThumbs','key':'your-youtube-developer-key','q':'','type':'search','results':5,'meta':true,'player':'embed','layout':'full'});
+</script>
+
+
+<style>.footer,.generic-footer{margin-bottom:98px}@media (min-width:374px){.footer,.generic-footer{margin-bottom:78px}}@media (min-width:546px){.footer,.generic-footer{margin-bottom:56px}}@media (min-width:1055px){.footer,.generic-footer{margin-bottom:0}}.disclaimer{position:fixed;z-index:9999999;bottom:0;right:0;border-top:2px solid #ff5c62;text-align:center;font-size:14px;font-weight:400;background-color:#fff;padding:5px 10px 5px 10px}.disclaimer a:hover{text-decoration:underline}@media (min-width:1052px){.disclaimer{text-align:right;border-left:2px solid red;border-top-left-radius:10px}}@media (min-width:1920px){.disclaimer{width:60%}}</style><div class="disclaimer">We support Ukraine and condemn war. Push Russian government to act against war. Be brave, vocal and show your support to Ukraine. Follow the latest news <a title="https://www.bbc.com/news/live/world-europe-60517447" target="_blank" href="https://www.bbc.com/news/live/world-europe-60517447" style="color: black;"><b>HERE</b></a></div><style>.footer,.generic-footer{margin-bottom:98px}@media (min-width:374px){.footer,.generic-footer{margin-bottom:78px}}@media (min-width:546px){.footer,.generic-footer{margin-bottom:56px}}@media (min-width:1055px){.footer,.generic-footer{margin-bottom:0}}.disclaimer{position:fixed;z-index:9999999;bottom:0;right:0;border-top:2px solid #ff5c62;text-align:center;font-size:14px;font-weight:400;background-color:#fff;padding:5px 10px 5px 10px}.disclaimer a:hover{text-decoration:underline}@media (min-width:1052px){.disclaimer{text-align:right;border-left:2px solid red;border-top-left-radius:10px}}@media (min-width:1920px){.disclaimer{width:60%}}</style><div class="disclaimer">We support Ukraine and condemn war. Push Russian government to act against war. Be brave, vocal and show your support to Ukraine. Follow the latest news <a title="https://www.bbc.com/news/live/world-europe-60517447" target="_blank" href="https://www.bbc.com/news/live/world-europe-60517447" style="color: black;"><b>HERE</b></a></div></body>
 </html>
-
-
