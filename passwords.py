@@ -2,8 +2,8 @@
 #CS361
 #ORSTATE
 #Passwords
-
-import fileinput            
+import requests
+import fileinput
 import string
 
 def login(username, password):
@@ -35,4 +35,20 @@ def login(username, password):
 
 username = input("Insert username")
 newpw = input("Insert password")
+
+s = requests.session()
+url_login = "<loginUrl>"
+
+payload = {
+    "username": "<user>",
+    "password": "<pass>"
+}
+
+req1 = s.post(url_login, data=payload)
+
+# Now to make sure you do not get the "Access denied", use the same session variable for the request.
+
+req2 = s.get(url_earthdata)
+
+
 login(username, newpw)
