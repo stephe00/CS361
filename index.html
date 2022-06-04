@@ -1,11 +1,10 @@
-
 <!DOCTYPE html>
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
-
+<!-- This application / website is made by Stephen Oium -->
 
 body {
   margin: 0;
@@ -203,17 +202,23 @@ window.open('https://www.oercommons.org/search?f.search=' + text,   'textwindow'
 		</form>
 	<div class="tfclear"></div>
 	</div>
+ 
+ 
+ <h2> O E R TEXTBOOKS by Stephen J. Oium</h2>
+ <h1> OER are open educational resources. The resources below are available to you free of charge. </h1> 
+<h1> All titles link to their own webpages respectively. Please use the contact page if you need help with anything. Thank you. </h1>
 
+<h2> If you can't find a book or need more info please use the youtube search function below </h2> 
 
+<script>
 
+<script src="https://yvoschaap.com/ytpage/ytembed.js"></script>
+    <form onsubmit="ytEmbed.init({'block':'youtubeDivSearch','type':'search','q':document.getElementById('ytSearchField').value,'results': 5,'meta':true}); return false;">
+    <input type="text" id="ytSearchField">  <input type="submit" value="  Search   ">
+    </form>
+    <div id="youtubeDivSearch"></div>
 
-
-
-<div class="header">
-  <h1><center> <font color="white">Stephen's OER Project. </h1>
-  <p>OER stands for Open Educational Resources <br> My 133J Final project will have many open source textbooks for Computer Science Courses & Other Courses <br> Below you will find the textbooks. Free. <br> </p>
-</div>
-
+</script>
 
 <div class="row">
   <div class="column">
@@ -342,16 +347,6 @@ function myFunction() {
   }
 }
 </script>
-
-<script src="https://yvoschaap.com/ytpage/ytembed.js"></script>
-<div id="ytThumbs"><ins>Made with the <a href="https://yvoschaap.com/youtube.html?utm_source=generator">Youtube Embed Generator</a>.</ins></div>
-
-<script>
-	ytEmbed.init({'block':'ytThumbs','key':'your-youtube-developer-key','q':'','type':'search','results':5,'meta':true,'player':'embed','layout':'full'});
-</script>
-
-
-
 
 <body>
 </html> 
